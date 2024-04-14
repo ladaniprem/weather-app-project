@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(S.jpg) no-repeat center fixed;
+    background-position: center;
+    background-size: cover;
+    color:rgb(100, 6, 29) ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.Stopwatch {
+    background-image: linear-gradient(to bottom,rgb(100, 6, 29));
+    background-size: 100% 100%;
+    padding: 20px 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.Stopwatch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.TimeDisplay {
+    font-size: 50px;
+    font-weight: 600;
+    color:rgb(100, 6, 29);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.2));
+}
+
+.Btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: rgb(100, 6, 29);
+    padding: 18px 36px;
+    right: 0%;
+    margin-inline: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Btn:before {
+    content: "Reset", "Stop", "Start";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2));
+    border-radius: 8px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.Btn:hover {
+    transform: translateY(-5%);
+}
+
+.Btn:active {
+    transform: translateY(0%);
+}
+
+.Btn:active:before {
+    transform: translateY(100%);
+}
+
+.Btn:nth-child(1):active:before {
+    content: "Reset";
+}
+
+.Btn:nth-child(2):active:before {
+    content: "Stop";
+}
+
+.Btn:nth-child(3):active:before {
+    content: "Start";
+}
+.Logo {
+     position: absolute;
+      top: -220px;
+       right:-10%;
+        transform: translateX(-80%);
+         width: 150px; 
+         height: auto;       
+}
